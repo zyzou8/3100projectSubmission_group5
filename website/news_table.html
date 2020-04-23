@@ -1,0 +1,35 @@
+<?php
+
+include('header.html');
+
+$sql = 'SELECT * FROM article where category=3 ORDER BY created ASC';
+$news_data = $db->execute_dql($sql);
+ 
+?>
+	
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		
+		<div class="col-md-8">
+			<div class="site-inner">
+				<div class="site-content">
+					<?php if(!empty($news_data)){foreach($news_data as $item){?>
+					<h5><a href="?m=article&id=<?php echo $item['id'];?>"><?php echo $item['title'];?></a></h5>
+					<p><?php echo $item['description'];?></p>
+					
+					<hr/>
+					<?php }}?>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="text-right">
+				<img src="/images/news.jpg" />
+			</div>
+		</div>
+		
+	</section><!-- /wrapper -->
+</section><!-- /MAIN CONTENT -->
+	
+<?php include('footer.html'); ?>

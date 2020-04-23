@@ -1,0 +1,91 @@
+<?php
+
+include('header.html');
+
+$sql = 'SELECT * FROM messages ORDER BY created ASC';
+$message_data = $db->execute_dql($sql);
+if(!empty($message_data)){
+    foreach ($message_data as $i=>$item) {
+        $user = $db->execute_dql('SELECT * FROM members WHERE id='.$item['uid']);
+        $user = $user[0];
+        $message_data[$i]['uid'] = $user['username'];
+    }
+}
+ 
+?>
+	
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		<div class="page-title text-center">
+			<h1>Welcome to comment zone.</h1>
+			<div class="description">
+				Add a comment to let others know more!
+			</div>
+		</div>
+		<div class="col-md-2"></div>
+		<div class="col-md-4">
+			<h3>Comment</h3>
+			<div id="ff">
+				<div class="form-group">
+					<input type="text" class="form-control input-lg" id="name" placeholder="Comment Title" required="required" />
+				</div>
+				<div class="form-group">
+					<textarea id="content" class="form-control" rows="4" cols="25" required="required" placeholder="Comment content"></textarea>
+				</div>
+				<a href="javascript:;" class="btn btn-send btn-lg page-scroll" id="message">Send Comment</a>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<h3>Latest posts</h3>
+			<hr/>
+			<?php if(!empty($message_data)){foreach($message_data as $item){?>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<span><?php echo $item['uid'];?></span>
+					&nbsp;|&nbsp;
+					<span><?php echo todate($item['created']);?></span>
+				</div>
+				<div class="panel-body">
+				<h6 class="media-heading"><?php echo $item['content'];?></h6>
+				</div>
+			</div>
+			<?php }}else{ ?>
+			<div>There is currently no data.</div>
+			<?php }?>
+		</div>
+		<div class="col-md-2"></div>
+	</section><!-- /wrapper -->
+</section><!-- /MAIN CONTENT -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+	
+<?php include('footer.html'); ?>
+<script>
+    $(document).ready(function(){
+        $("#message").click(function(){
+            var name = $("#name").val();
+            var content = $("#content").val();
+            $.ajax({
+                type:"post",
+                url:"message.php",
+                data:{name:name, content:content},
+                dataType:"json",
+                success: function (response) {
+                    if(response.status==1){
+                        alert(response.msg);
+						window.location.reload();
+                    }else{
+						alert(response.msg);
+					}
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,27 @@
+body { background-color: #fff;}
+
+/* 左侧菜单 */
+.sidebar { width: 180px; height: 100%; float: left; padding: 20px 0; background-color: #222;}
+.info a { display: block; color: #fff; padding: 10px 20px !important; overflow: hidden; line-height: 20px;}
+.info a i { margin-right: 10px;}
+.info a:hover, .info a:focus, .info a:hover { background-color: #000 !important; }
+.small_tabs { margin: 0; padding: 0 30px; display: none; background-color: #333;}
+.small_tabs li { list-style-type: none; display: block;}
+.small_tabs li a { display: block; line-height: 20px; color: #ccc; padding: 10px 0 !important;}
+.small_tabs li a i { margin-right: 10px;}
+.sidebar .nav-list li .icon-box { display: block; width: 20px; height: 20px; margin: 0 10px 0 0; overflow: hidden; float: left;}
+.sidebar .nav-list li .icon-box img { width: 100%; height: 100%; margin-top: -3px;}
+.sidebar .nav-list li .menu-text { display: block; height: 20px; margin: 0; overflow: hidden; float: left;}
+
+/* 二级分类图标 */
+.sidebar .nav-list .small_tabs .icon-box { background: url("../../admin/images/icon-son.png") no-repeat center center; background-size: 100% 100%;}
+
+/* 顶部菜单 */
+.navbar { width: 1200px; margin: 0 auto; border: none; border-radius: 0; background-color: #000;}
+.navbar-brand { padding: 0 20px; line-height: 50px; height: 50px; font-size: 18px; font-weight: bold; color: #fff !important;}
+.navbar-brand span { margin: 0 5px 0 0;}
+.navbar-default .navbar-nav>li>a { color: #fff;}
+.navbar .badge { font-size: 10px; background-color: #ffd200; color: #000; font-weight: normal;}
+
+/* 右侧 */
+.main-content { width: calc(100% - 180px); height: 100%; float: left; padding: 50px;}

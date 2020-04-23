@@ -1,0 +1,28 @@
+/* 通用样式 */
+html { width: 100%; height: 100%;}
+body { width: 100%; height: 100%; background-color: transparent;}
+.container { width: 500px;}
+.breadcrumb { border-radius: 0; background-color: #fff; padding: 15px 20px; border-bottom: 1px solid #e1e1e1;}
+.breadcrumb .active { color: #999;}
+.main-container { width: 1200px; margin: auto; height: calc(100% - 50px);}
+.panel-body { background-color: #fff;}
+
+/* default-main */
+.default-main { width: 100%; height: 100%; padding: 15px 50px;}
+.default-main .thumbnail img { height: 60px; margin: 20px auto;}
+
+/* 表格 */
+.table>thead>tr>td { background-color: #e1e1e1;}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th { vertical-align: middle; padding: 10px;}
+.thumbContent { height: 50px;}
+
+/* 登录 */
+.login-box { background-color: #fff; margin-top: 5%; padding: 50px;}
+
+
+
+
+
+
+
+

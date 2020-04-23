@@ -1,0 +1,41 @@
+<?php
+
+include('header.html');
+
+$sql = 'SELECT * FROM article WHERE id='.$_GET['id'];
+$detail = $db->execute_dql($sql);
+$detail = $detail[0];
+ 
+?>
+	
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		
+		<div class="col-md-8">
+			<div class="site-inner">
+				<div class="site-content">
+					<h2><?php echo $detail['title'];?></h2>
+					<p><?php echo $detail['description'];?></p>
+					<hr/>
+					<p><?php echo $detail['content'];?></p>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="text-right">
+				<?php if(empty($detail['thumb'])){ ?>
+				<img width="100%" src="/images/default.jpg" />
+				<?php }else{ ?>
+				<img width="100%" src="<?php echo $detail['thumb'];?>">
+				<?php }?>
+			</div>
+		</div>
+		
+	</section><!-- /wrapper -->
+</section><!-- /MAIN CONTENT -->
+<br><br><br><br><br><br><br><br><br><br><br><br>
+	
+<?php include('footer.html'); ?>

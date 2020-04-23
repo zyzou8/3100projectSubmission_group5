@@ -1,0 +1,45 @@
+<?php
+
+include('header.html');
+
+$sql = 'SELECT * FROM article where category=2 ORDER BY created ASC LIMIT 0,6';
+$menu_data = $db->execute_dql($sql);
+ 
+?>
+	
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		<div class="page-title text-center">
+			<h1>Restaurant & Menu</h1>
+			<div class="description">
+				Select restaurant to view restaurant menu.
+			</div>
+		</div>
+		<div class="no-gutter new-main-box">
+			<?php if(!empty($menu_data)){foreach($menu_data as $item){?>
+			<div class="col-lg-6 item">
+				<article class="box-shadow">
+					<div class="no-gutter">
+						<div class="col-sm-6 item2">
+							<img src="<?php echo $item['thumb'];?>">
+						</div>
+						<div class="col-sm-6">
+							<div class="art-content text-center">
+								<div class="heading">
+									<h2><?php echo $item['title'];?></h2>
+									<hr class="line">
+								</div>
+								<p><?php echo $item['description'];?></p>
+								<a href="?m=article&id=<?php echo $item['id'];?>" class="btn btn-theme">View more...</a>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<?php }}?>
+		</div>
+	</section><!-- /wrapper -->
+</section><!-- /MAIN CONTENT -->
+	
+<?php include('footer.html'); ?>

@@ -1,0 +1,83 @@
+<?php
+
+$system = $db->execute_dql('SELECT *  FROM setting');
+$system = $system[0];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content=" Free Responsive Html5 Templates" />
+	<title><?php echo $system['title']; ?></title>
+	<link rel="stylesheet" href="/website/css/bootstrap.min.css">
+	<link href="/website/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/website/css/style.css">
+</head>
+
+<body>
+	
+<header class="header">
+	<div class="sidebar-toggle-box">
+		<div class="fa fa-bars tooltips" data-placement="right"></div>
+	</div>
+	<!--logo start-->
+	<a href="#" class="logo"><b><?php echo $system['title']; ?></b></a>
+	<!--logo end-->
+	<div class="top-menu">
+		<ul class="nav pull-right top-menu">
+			<li >
+				<?php if($_SESSION['userid']){ ?>
+				<a class="social">User：<?php echo $_SESSION['username']; ?></a>
+					<?php if($_SESSION['usertype']==2){ ?>
+					<a class="social" href="/admin/login.php">Admin</a>
+					<?php }else{ ?>
+					<a class="social" href="/admin/login.php">Personal Center</a>
+					<?php }?>
+					<a class="social" href="/admin/logout.php">Logout</a>
+				<?php }else{ ?>
+				<a class="social" href="/admin/register.php">Register</a>
+				<a class="social" href="/admin/login.php">Login</a>
+				<?php }?>
+			</li>
+		</ul>
+	</div>
+</header>
+<!--header end-->
+<!--sidebar start-->
+<aside>
+	<div id="sidebar" class="nav-collapse ">
+		<!-- sidebar menu start-->
+		<ul class="sidebar-menu">
+			<li>
+				<a href="?m=index">
+					<i class="fa fa-tags"></i>
+					<span>Main</span>
+				</a>
+			</li>
+			<li>
+				<a href="?m=news_table">
+					<i class="fa fa-tags"></i>
+					<span>Latest News</span>
+				</a>
+			</li>
+			<li>
+				<a href="?m=canteen">
+					<i class="fa fa-tags"></i>
+					<span>Restaurant and Menu</span>
+				</a>
+			</li>
+			<li>
+				<a href="?m=comment">
+					<i class="fa fa-tags"></i>
+					<span>Comments</span>
+				</a>
+			</li>
+		</ul>
+	  <!-- sidebar menu end-->
+	</div>
+</aside>
+<!--sidebar end-->
