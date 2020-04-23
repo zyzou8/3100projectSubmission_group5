@@ -9,3 +9,6 @@ admin: user management documents
 uploads: documents uploaded
 images: originally saved images
 include: connection use documents
+
+testing, why we cannot download the zip file from github now?
+And why all git commit history is gone?
