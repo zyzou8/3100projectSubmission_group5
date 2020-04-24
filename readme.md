@@ -6,6 +6,8 @@ Openrice is our inspiration. And we want to create a food forum for CU canteens!
 We've used php as our server side language and mysql as our database.  
 
 ## How to use
+We use phpstudy2018 for development. Please copy all our files and copy it to WWW folder. After create local server, please enter url localhost/phpmyadmin using root and root as username and password first. Then please create a new database and import our local database file(db.sql). Then you can go to our main page by localhost.  
+
 Enter url = "localhost" in browser in order to get access to the page 
 
 database URL: localhost/phpmyadmin  
