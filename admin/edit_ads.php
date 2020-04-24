@@ -11,7 +11,7 @@ if($_POST){
     move_uploaded_file($_FILES['thumb']['tmp_name'], '../' . $thumb);
     $thumb = empty($_FILES['thumb']['size']) ? $_POST['old_thumb'] : $thumb;
 
- 	$sql = 'UPDATE ads SET title="'.$_POST["title"].'",link_url="'.$_POST["link_url"].'",thumb="'.$thumb.'",content="'.$_POST["content"].'",updated='.time().' WHERE id='.$_POST['id'].';';
+ 	$sql = 'UPDATE ads SET title="'.$_POST["title"].'",link_url="'.$_POST["link_url"].'",thumb="'.$thumb.'",content="'.$_POST["content"].' WHERE id='.$_POST['id'].';';
 
     if($db->execute_dml($sql)){
 		echo '<script> alert("Successful!"); </script>';

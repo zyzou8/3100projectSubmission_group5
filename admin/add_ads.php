@@ -12,8 +12,8 @@ if($_POST){
         move_uploaded_file($_FILES['thumb']['tmp_name'], '../' . $thumb);
     }
 
- 	$sql = 'INSERT INTO ads(title,link_url,thumb,content,status,created)
-    VALUES("'.$_POST['title'].'","'.$_POST['link_url'].'","'.$thumb.'","'.$_POST['content'].'",1,'.time().');';
+ 	$sql = 'INSERT INTO ads(title,link_url,thumb,content,status)
+    VALUES("'.$_POST['title'].'","'.$_POST['link_url'].'","'.$thumb.'","'.$_POST['content'].'",1);';
 
 	if($db->execute_dml($sql)){
 		echo '<script> alert("Successful!!"); </script>';
