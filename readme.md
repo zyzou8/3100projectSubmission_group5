@@ -18,6 +18,10 @@ uploads: documents uploaded
 images: originally saved images  
 include: connection use documents  
 
+If you want to try admin account:  
+username: admin  
+password: admin123  
+
 ## Some comments
 - We've updated a bit after demo  
 - Also you can take a look at our demo video with beautiful music!  (Since the size is too big you can view it by https://mycuhk-my.sharepoint.com/:v:/g/personal/1155077061_link_cuhk_edu_hk/EVyaz_sDCmlHpAhAeFNG94gBap28noXFyZkK9HKRFikG6w?e=GdFhWs)  
