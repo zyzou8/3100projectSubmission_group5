@@ -1,4 +1,4 @@
-# Group 5 CSCI3100 CUc@nteen
+# CSCI3100 Group 5 project:CU C@nteen
 ## Project overview
 Openrice is our inspiration. And we want to create a food forum for CU canteens!
 
