@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2020 年 04 月 24 日 09:20
+-- 生成日期: 2020 年 04 月 24 日 14:17
 -- 服务器版本: 5.5.53
 -- PHP 版本: 5.4.45
 
@@ -43,9 +43,7 @@ CREATE TABLE IF NOT EXISTS `ads` (
 INSERT INTO `ads` (`id`, `title`, `link_url`, `thumb`, `content`, `status`) VALUES
 (13, 'Our New Dish Is Out!', '?m=article&id=13', 'uploads/1.jpg', '', 1),
 (14, 'Fight Virus Together at SeeYou@Shaw', '?m=article&id=14', 'uploads/2.jpg', '', 1),
-(15, 'Canteens - Opening Hours Update', '?m=article&id=15', 'uploads/3.jpg', '', 1),
-(20, 'New Banner Image!', '', 'uploads/1587718600.jpg', '', 1),
-(21, 'Banner testing', '', 'uploads/1587719131.jpg', '', 1);
+(15, 'Canteens - Opening Hours Update', '?m=article&id=15', 'uploads/3.jpg', '', 1);
 
 -- --------------------------------------------------------
 
