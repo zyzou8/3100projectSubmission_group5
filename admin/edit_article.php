@@ -34,11 +34,11 @@ $category=$db->execute_dql("SELECT * FROM category WHERE type=1");
     <form enctype="multipart/form-data" method="post">
         <input type="hidden" name="id" value="<?php echo $detail['id'];?>"/>
         <div class="form-group">
-            <label>标题</label>
+            <label>Title</label>
             <input value="<?php echo $detail['title'];?>" name="title" type="text" class="form-control" />
         </div>
         <div class="form-group">
-            <label>分类</label>
+            <label>Classification</label>
             <select name="category" class="form-control category">
                 <?php if(empty($category)) { ?>
                     <option>There is no data, please add</option>
@@ -52,11 +52,11 @@ $category=$db->execute_dql("SELECT * FROM category WHERE type=1");
             </select>
         </div>
         <div class="form-group">
-            <label>描述</label>
+            <label>Description</label>
             <textarea name="description" type="text" class="form-control" ><?php echo $detail['description'];?></textarea>
         </div>
         <div class="form-group">
-            <label>封面</label>
+            <label>Cover</label>
             <p>
                 <a target="_blank" href="<?php if(!empty($detail['thumb'])){ echo '../'.$detail['thumb'];}else{?>images/default.png<?php }?>"><img class="thumbContent" src="<?php if(!empty($detail['thumb'])){ echo '../'.$detail['thumb'];}else{?>images/default.png<?php }?>" />
                 </a>
@@ -65,7 +65,7 @@ $category=$db->execute_dql("SELECT * FROM category WHERE type=1");
             <input name="thumb" type="file" />
         </div>
         <div class="form-group">
-            <label>内容</label>
+            <label>Content</label>
             <textarea name="content" type="text" class="form-control" ><?php echo $detail['content'];?></textarea>
         </div>
         <div class="form-group">
