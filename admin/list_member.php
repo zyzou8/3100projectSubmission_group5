@@ -16,7 +16,7 @@ $data=$db->execute_dql($sql);
 
 <ul class="breadcrumb">
     <li><a href="#">Homepage</a></li>
-    <li class="active">User list</li>
+    <li class="active">User List</li>
 </ul>
 
 <div class="panel-body">

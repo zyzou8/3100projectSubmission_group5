@@ -28,7 +28,7 @@ if(!empty($data)){
 
 <ul class="breadcrumb">
     <li><a href="#">Homepage</a></li>
-    <li class="active">Article list</li>
+    <li class="active">Article List</li>
 </ul>
 
 <div class="panel-body">
