@@ -24,6 +24,11 @@ if(!empty($data))
 
 ?>
 
+<ul class="breadcrumb">
+    <li><a href="#">Homepage</a></li>
+    <li class="active">Message list</li>
+</ul>
+
 <div class="panel-body">
     <table class="table table-bordered table-hover">
         <thead>
