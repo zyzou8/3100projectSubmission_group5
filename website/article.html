@@ -2,8 +2,8 @@
 
 include('header.html');
 
-$sql = 'SELECT * FROM article WHERE id='.$_GET['id'];#this is a SQL statement: select the article with the certerin id for the datebase 
-$detail = $db->execute_dql($sql);#update the database
+$sql = 'SELECT * FROM article WHERE id='.$_GET['id'];datebase 
+$detail = $db->execute_dql($sql);
 $detail = $detail[0];
  
 ?>
